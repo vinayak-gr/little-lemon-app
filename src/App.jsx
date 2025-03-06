@@ -1,7 +1,8 @@
-import Header from "./Header";
-import Nav from "./Nav";
-import MainContent from "./MainContent";
-import Footer from "./Footer";
+import React from "react";
+import Header from "./components/Header";
+import Nav from "./components/Nav";
+import MainContent from "./components/MainContent";
+import Footer from "./components/Footer";
 import './App.css'
 
 
