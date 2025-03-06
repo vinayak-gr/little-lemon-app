@@ -1,10 +1,12 @@
-
+import React from "react";
+import "./App.css";
 
 function Header() {
-    return 
+    return( 
         <header>
             <img src="./logo.png" alt="Little Lemon Logo" />
         </header>
+    );
 }
 
 export default Header;
