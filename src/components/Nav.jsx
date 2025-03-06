@@ -1,34 +1,48 @@
 import React, { useState } from "react";
-import logo from "./assets/logo.jpg"
-import "./App.css";
+import logo from "../assets/Logo .svg";
 
-function Nav() {
-    const[menuOpen, setMenuOpen] = useState(false);
+const Nav = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
 
-    const toggleMenu = () => {
-        setMenuOpen(!menuOpen);
-    }
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
 
-    return( 
-        <nav className={`navbar ${menuOpen ? "open" : ""}`}>
-            <a href="/"><img src={logo} alt="logo" className="logo" width="150px"></img></a>
-            <div className="menu-icon" onClick={toggleMenu}>
-                <div className="bar"></div>
-                <div className="bar"></div>
-                <div className="bar"></div>
-            </div>
-            <ul className={`nav-links ${menuOpen ? "visible" : ""}`}>
-                <li><a href="/">Home</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/contact">Contact</a></li>
-                <li><a href="/menu">Menu</a></li>
-                <li><a href="/reservation">Reservation</a></li>
-                <li><a href="/orderOnline">Order Online</a></li>
-                <li><a href="/login">Login</a></li>
-            </ul>
-        
-        </nav>
-    );
-  }
-  
-  export default Nav;
+  return (
+    <nav className={`navbar ${menuOpen ? "open" : ""}`}>
+      <a href="/" className="logo">
+        <img src={logo} alt="" />
+      </a>
+      <div className="menu-icon" onClick={toggleMenu}>
+        <div className="bar"></div>
+        <div className="bar"></div>
+        <div className="bar"></div>
+      </div>
+      <ul className={`nav-links ${menuOpen ? "visible" : ""}`}>
+        <li>
+          <a href="/">Home</a>
+        </li>
+        <li>
+          <a href="/">About</a>
+        </li>
+        <li>
+          <a href="/">Services</a>
+        </li>
+        <li>
+          <a href="/">Menu</a>
+        </li>
+        <li>
+          <a href="/">Reservations</a>
+        </li>
+        <li>
+          <a href="/booking">Order Online</a>
+        </li>
+        <li>
+          <a href="/">Login</a>
+        </li>
+      </ul>
+    </nav>
+  );
+};
+
+export default Nav;
